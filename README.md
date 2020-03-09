@@ -1,6 +1,6 @@
-# Project Title
+# Citing Insights (Beta)
 
-One Paragraph of project description goes here
+A web application designed to streamline assessment of students' information literacy and other skills. Beta release March 2020 and full release May 2020. With Citing Insights, you can upload a student paper, all the citations are detected and discovery of the sources are made easy. The tool is designed so you can leverage and/or edit AAC&U Information Literacy and other assessment rubrics to the student papers, and annotate, providing students with feedback, or providing accrediting bodies with detailed reports. Citing Insights was developed by students working at Humboldt State University Library, thanks to funding from CSU Graduation Initiative 2025.
 
 ## Getting Started
 
@@ -57,10 +57,10 @@ Give an example
 Add additional notes about how to deploy this on a live system
 
 ## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [MongoDB ](https://www.mongodb.com/) - database
+* [ExpressJS](https://expressjs.com/) - web framework for nodeJS
+* [ReactJS](https://reactjs.org/) - web framework for createing User Interfaces
+* [NodeJS](https://nodejs.org/en/) - backend framework
 
 ## Contributing
 
@@ -71,10 +71,16 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
+ 
+ **Cindy Batres**
+ **Elizabeth Lujan**
+ **Ben Miller**
+ **Kyle Smith** ,and 
+ **Mitchell Waters** 
+ 
+## Project Sponser 
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+**Cyril Oberlander (Library Dean)
 
 ## License
 
@@ -82,6 +88,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* A big thank you to our alpha and beta testers! They are in alaphabetical order: Sue Armitage, Victoria Bruner, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, and Joshua Zender.  
+
