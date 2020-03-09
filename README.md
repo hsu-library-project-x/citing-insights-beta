@@ -72,11 +72,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
  
- *[Cindy Batres](https://github.com/batresc)
- *[Elizabeth Lujan](https://github.com/eal376) 
- *[Ben Miller](https://github.com/Benmoony)
- *[Kyle Smith](https://github.com/smittythehippy)
- *[Mitchell Waters](https://github.com/mkwalters)
+ * [Cindy Batres](https://github.com/batresc)
+ * [Elizabeth Lujan](https://github.com/eal376) 
+ * [Ben Miller](https://github.com/Benmoony)
+ * [Kyle Smith](https://github.com/smittythehippy)
+ * [Mitchell Waters](https://github.com/mkwalters)
  
 ## Project Sponser 
 
