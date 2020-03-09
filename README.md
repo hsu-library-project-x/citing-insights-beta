@@ -1,6 +1,6 @@
-# Citing Insights (Beta)
+# Citing Insights
 
-A web application designed to streamline assessment of students' information literacy and other skills. Beta release March 2020 and full release May 2020. With Citing Insights, you can upload a student paper, all the citations are detected and discovery of the sources are made easy. The tool is designed so you can leverage and/or edit AAC&U Information Literacy and other assessment rubrics to the student papers, and annotate, providing students with feedback, or providing accrediting bodies with detailed reports. Citing Insights was developed by students working at Humboldt State University Library, thanks to funding from CSU Graduation Initiative 2025.
+A web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can upload a student paper, all the citations are detected and discovery of the sources are made easy. The tool is designed so you can leverage and/or edit AAC&U Information Literacy and other assessment rubrics to the student papers, and annotate, providing students with feedback, or providing accrediting bodies with detailed reports. Citing Insights was developed by students working at Humboldt State University Library, thanks to funding from CSU Graduation Initiative 2025. (Beta release March 2020 and full release May 2020). 
 
 ## Getting Started
 
@@ -72,15 +72,11 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
  
- **Cindy Batres**
- **Elizabeth Lujan**
- **Ben Miller**
- **Kyle Smith** ,and 
- **Mitchell Waters** 
+ Cindy Batres, Elizabeth Lujan, Ben Miller, Kyle Smith, and Mitchell Waters
  
 ## Project Sponser 
 
-**Cyril Oberlander (Library Dean)
+Cyril Oberlander (Library Dean)
 
 ## License
 
@@ -88,5 +84,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* A big thank you to our alpha and beta testers! They are in alaphabetical order: Sue Armitage, Victoria Bruner, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, and Joshua Zender.  
+A big thank you to our alpha and beta testers! They are in alaphabetical order: 
+Sue Armitage, Victoria Bruner, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, and Joshua Zender.  
 
