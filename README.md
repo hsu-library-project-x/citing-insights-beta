@@ -80,7 +80,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
  
 ## Project Sponser 
 
-Cyril Oberlander (Library Dean)
+* [Cyril Oberlander (Library Dean)](https://github.com/cyriloberlander)
 
 ## License
 
