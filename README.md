@@ -1,6 +1,6 @@
 # Citing Insights
 
-A web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can upload a student paper, all the citations are detected and discovery of the sources are made easy. The tool is designed so you can leverage and/or edit AAC&U Information Literacy and other assessment rubrics to the student papers, and annotate, providing students with feedback, or providing accrediting bodies with detailed reports. Citing Insights was developed by students working at Humboldt State University Library, thanks to funding from CSU Graduation Initiative 2025. 
+A web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can upload a student paper, all the citations are detected and discovery of the sources are made easy. The tool is designed so you can leverage and/or edit AAC&U Information Literacy and other assessment rubrics to the student papers, and annotate, providing students with feedback, or providing accrediting bodies with detailed reports.
 
 ## Version
  Beta 
