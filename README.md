@@ -60,8 +60,7 @@ PDF viewer
   * Zoom out justifies left leaving large grey space 
   
 Overview
-  * If page was visited before and user goes back to analyze and to make more assessments or changes, then the page will have to be  
-   refreshed upon return. 
+  * If page was visited before and user goes back to analyze and to make more assessments or changes, then the page will have to be     refreshed upon return. 
 
 ## Built With
 * [MongoDB ](https://www.mongodb.com/) - database
