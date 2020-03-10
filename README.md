@@ -1,6 +1,9 @@
 # Citing Insights
 
-A web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can upload a student paper, all the citations are detected and discovery of the sources are made easy. The tool is designed so you can leverage and/or edit AAC&U Information Literacy and other assessment rubrics to the student papers, and annotate, providing students with feedback, or providing accrediting bodies with detailed reports. Citing Insights was developed by students working at Humboldt State University Library, thanks to funding from CSU Graduation Initiative 2025. (Beta release March 2020 and full release May 2020). 
+A web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can upload a student paper, all the citations are detected and discovery of the sources are made easy. The tool is designed so you can leverage and/or edit AAC&U Information Literacy and other assessment rubrics to the student papers, and annotate, providing students with feedback, or providing accrediting bodies with detailed reports. Citing Insights was developed by students working at Humboldt State University Library, thanks to funding from CSU Graduation Initiative 2025. 
+
+## Version
+ Beta release March 14, 2020 (pi day!) and Version 1 release May of 2020 . 
 
 ## Getting Started
 
@@ -64,11 +67,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+This is an open source project and we encourage anyone to take what we've done and build upon it, as long as the intent is good. That being said, the authors will not be responsible for maintaing this project. 
 
 ## Authors
  
@@ -84,7 +83,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License
 
 ## Acknowledgments
 
