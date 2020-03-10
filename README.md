@@ -43,6 +43,7 @@ Add additional notes about how to deploy this on a live system
 
 Manage Coursework
   * Assignments are slow to appear
+  * Papers are not deleted
   
 Upload
   * Upload feedback too fast for user to see
