@@ -62,14 +62,6 @@ PDF viewer
 Overview
   * If page was visited before and user goes back to analyze and to make more assessments or changes, then the page will have to be  
    refreshed upon return. 
- 
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Built With
 * [MongoDB ](https://www.mongodb.com/) - database
