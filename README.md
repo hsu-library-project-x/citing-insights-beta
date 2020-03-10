@@ -37,21 +37,25 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Known Issues
 
-* Manage Coursework
+Manage Coursework
   * Assignments are slow to appear
-* Upload
+  
+Upload
   * Upload feedback too fast for user to see
   * Application crases when class and assignment are not selected 
-* Rubrics
+  
+Rubrics
   * User can add the same rubric more than once
   * Create new rubric accepts out of range number of cards
-* PDF viewer
+  
+PDF viewer
   * PDF Search Tool does not bring user to desired location on the paper
   * Highlighted text color does not change when iterating through list
   * PDF text font and size changes upon text selection
   * Viewer slower on large documents with many pages
   * Zoom out justifies left leaving large grey space 
-* Overview
+  
+Overview
   * If page was visited before and user goes back to analyze and to make more assessments or changes, then the page will have to be  
    refreshed upon return. 
  
