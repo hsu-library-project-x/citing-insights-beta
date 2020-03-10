@@ -17,6 +17,7 @@ What things you need to install the software and how to install them
 Give examples
 ```
 
+
 ### Installing
 
 A step by step series of examples that tell you how to get a development env running
@@ -35,6 +36,9 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
+## Deployment
+
+Add additional notes about how to deploy this on a live system
 ## Known Issues
 
 Manage Coursework
@@ -66,10 +70,6 @@ Explain what these tests test and why
 ```
 Give an example
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
 
 ## Built With
 * [MongoDB ](https://www.mongodb.com/) - database
