@@ -96,5 +96,5 @@ Sue Armitage, Victoria Bruner, Chris Guillen, Sally Hang, Julia Heatherwick, Ali
 
 ## User Guides
 
-A [quick guide](./CI Documentation Beta.pdf) was developed by the Citing Insights team to assist users.
+A [quick guide](https://https://github.com/hsu-library-project-x/citing-insights-beta/blob/master/CI%20Documentation%20Beta.pdf) was developed by the Citing Insights team to assist users.
 
