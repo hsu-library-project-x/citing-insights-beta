@@ -94,3 +94,7 @@ This project is licensed under the MIT License
 A big thank you to our alpha and beta testers! They are in alaphabetical order: 
 Sue Armitage, Victoria Bruner, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, and Joshua Zender.  
 
+## User Guides
+
+A [quick guide](./CI Documentation Beta.pdf) was developed by the Citing Insights team to assist users.
+
