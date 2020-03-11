@@ -47,7 +47,7 @@ Manage Coursework
   
 Upload
   * Upload feedback too fast for user to see
-  * Application crases when class and assignment are not selected 
+  * Application crashes when class and assignment are not selected 
   
 Rubrics
   * User can add the same rubric more than once
@@ -61,7 +61,7 @@ PDF viewer
   * Zoom out justifies left leaving large grey space 
   
 Overview
-  * If page was visited before and user goes back to analyze and to make more assessments or changes, then the page will have to be     refreshed upon return. 
+  * If page was visited before and user goes back to analyze and to make more assessments or changes, then the page will have to be refreshed upon return. 
 
 ## Built With
 * [MongoDB ](https://www.mongodb.com/) - database
