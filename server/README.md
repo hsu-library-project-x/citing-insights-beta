@@ -2,7 +2,8 @@
 
 Version: Beta
 
-# Citing Insights Server Installation
+Citing Insights Server Installation
+=====
 Citing Insights is a web application to assess student papers. Our tool is designed to run on a remote Linux server and enables:
 The ability to access the Citing Insights tool from any computer in any location
 Allowing many users to share access the more powerful resources on a well equipped server
@@ -21,35 +22,35 @@ Citing Insights requires the Anystyle.io software to parse academic references. 
   * First, install Ruby from the Ruby Homepage 
 (url: https://www.ruby-lang.org/en/documentation/installation/ )
 
-  * Then, install Anystyle by typing  [sudo] gem install anystyle-cli  into the terminal. 
+  * Then, install Anystyle by typing  `[sudo] gem install anystyle-cli` into the terminal. 
 
 ### Clone the Repository
-Clone the repository by running 
+Clone the repository by typing into the terminal:
 
-git clone https://github.com/hsu-library-project-x/citing-insights-beta.git
+`git clone https://github.com/hsu-library-project-x/citing-insights-beta.git`
 
 ### Install Dependencies in Client Directory
 
 To install dependencies, navigate inside the citing-insights-beta directory, created through the previous clone command. Then navigate to the client directory using these two commands. 
 
-cd citing-insights-beta
+`cd citing-insights-beta`
 
-cd client
+`cd client`
 
 Install all necessary dependencies for the client side of the application by running the following command. Please make sure you’re in the client directory. 
 
-npm install
+`npm install`
 
 ### Install Dependencies in Server Directory
 
 Assuming, you just installed dependencies in the client directory navigate to the server directory using the following commands. 
 
-cd ..
-cd server
+`cd ..`
+`cd server`
 
 Then install dependencies on the server using the command
 
- npm install
+`npm install`
 
 ### Obtaining Google API Credentials
 Citing Insights requires Google to log in and out of the application. In order for the Citing Insights log in to work for your institution, you need to obtain Google API Credentials. To get credentials go to console.developers.google, create a new project, and enable (it is free, but need to use a credit/debit card to register) to both Google Analytics API and Identity Toolkit API
@@ -64,13 +65,13 @@ Similarly, in citing-insights-beta/client/src/config.json, place your ClientID i
 
 To run the application locally and in development mode, type into the terminal:
 
-npm run dev
+`npm run dev`
 
 This will launch the server at http://localhost:5000
 
 And the client (React application) at http://localhost:3000
 
-To stop the servers, type CTRL + C in the terminal that you are running npm run dev in.
+To stop the servers, press CTRL + C in the terminal that you are running `npm run dev` in.
 Note: This configuration is running nodemon, which allows for the server to restart any time it detects a change in a file(hot reloading). So, no need to bring down and bring up the server each time a change is made to a file, simply saving the file suffices.
 
 To deploy the application non-locally, follow the documentation here
