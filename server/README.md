@@ -13,14 +13,14 @@ While our application has the capability to run on a Windows and Mac Server, Cit
 ## Installing Citing Insights
 The following are all UNIX commands, to be typed in a terminal.  
 ### Install Node.JS
-Install a version of Node.js on the server. Following the steps from the Node.js website (https://nodejs.org/en/).  
+Install a version of Node.js on the server. Following the steps from the Node.js website ([https://nodejs.org/en/]).  
 ### Install MongoDB
-Install MongoDB on the server, access MongoDB installation documentation (https://docs.mongodb.com/manual/administration/install-on-linux/)  and choose your Linux distribution for instructions to install on your server.  
+Install MongoDB on the server, access MongoDB installation documentation ([https://docs.mongodb.com/manual/administration/install-on-linux/])  and choose your Linux distribution for instructions to install on your server.  
 ### Install Anystyle
 Citing Insights requires the Anystyle.io software to parse academic references. Anystyle.io requires that the Ruby programming language  is available on the server to install the Anystyle Gem.
 
   * First, install Ruby from the Ruby Homepage 
-(url: https://www.ruby-lang.org/en/documentation/installation/ )
+   ([https://www.ruby-lang.org/en/documentation/installation/])
 
   * Then, install Anystyle by typing  `[sudo] gem install anystyle-cli` into the terminal. 
 
@@ -53,7 +53,7 @@ Then install dependencies on the server using the command
 `npm install`
 
 ### Obtaining Google API Credentials
-Citing Insights requires Google to log in and out of the application. In order for the Citing Insights log in to work for your institution, you need to obtain Google API Credentials. To get credentials go to console.developers.google, create a new project, and enable (it is free, but need to use a credit/debit card to register) to both Google Analytics API and Identity Toolkit API
+Citing Insights requires Google to log in and out of the application. In order for the Citing Insights log in to work for your institution, you need to obtain Google API Credentials. To get credentials go to [console.developers.google.com], create a new project, and enable (it is free, but need to use a credit/debit card to register) to both Google Analytics API and Identity Toolkit API
 Be sure to click the Credentials tab on the left and set the correct Redirect URI’s, as instructed by Google. 
 
 Back in the application’s directory, navigate to citing-insights-beta/server/config.js,
