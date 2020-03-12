@@ -23,7 +23,7 @@ Citing Insights requires the Anystyle.io software to parse academic references. 
 
   * Then, install Anystyle by typing  [sudo] gem install anystyle-cli  into the terminal. 
 
-Clone the Repository
+### Clone the Repository
 Clone the repository by running 
 
 git clone https://github.com/hsu-library-project-x/citing-insights-beta.git
