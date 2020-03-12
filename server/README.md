@@ -13,7 +13,7 @@ While our application has the capability to run on a Windows and Mac Server, Cit
 ## Installing Citing Insights
 The following are all UNIX commands, to be typed in a terminal.  
 ### Install Node.JS
-Install a version of Node.js on the server. Following the steps from the Node.js website ([https://nodejs.org/en/]).  
+Install a version of Node.js on the server. Following the steps from the Node.js website [https://nodejs.org/en/].  
 ### Install MongoDB
 Install MongoDB on the server, access MongoDB installation documentation ([https://docs.mongodb.com/manual/administration/install-on-linux/])  and choose your Linux distribution for instructions to install on your server.  
 ### Install Anystyle
