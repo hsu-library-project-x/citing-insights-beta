@@ -45,7 +45,7 @@ Install all necessary dependencies for the client side of the application by run
 
 Assuming, you just installed dependencies in the client directory navigate to the server directory using the following commands. 
 
-`cd ..`
+`cd ..`  
 `cd server`
 
 Then install dependencies on the server using the command
