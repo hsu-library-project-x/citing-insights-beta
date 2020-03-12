@@ -2,7 +2,7 @@
 
 Version: Beta
 
-# Citing Insights
+# Citing Insights Server Installation
 Citing Insights is a web application to assess student papers. Our tool is designed to run on a remote Linux server and enables:
 The ability to access the Citing Insights tool from any computer in any location
 Allowing many users to share access the more powerful resources on a well equipped server
