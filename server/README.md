@@ -1,61 +1,77 @@
-# Citing Insights API Documentation
-
-Each collection in the database has the same configuration of end points that can be reached.
-
-For the following, <collection> can be any of the following: 
-users, courses, assignments, papers, citations
-  
-## EndPoints
 
 
-#### List --  GET Request
+Version: Beta
+
+Citing Insights
+Citing Insights is a web application to assess student papers. Our tool is designed to run on a remote Linux server and enables:
+The ability to access the Citing Insights tool from any computer in any location
+Allowing many users to share access the more powerful resources on a well equipped server
+Centralized installation and configuration of packages, supporting libraries, etc..
+Requirements
+While our application has the capability to run on a Windows and Mac Server, Citing Insights (and our documentation) is in regard to a Linux server 
+Installing Citing Insights
+The following are all UNIX commands, to be typed in a terminal
+Install Node.JS
+Install a version of Node.js on the server. Following the steps from the Node.js website (https://nodejs.org/en/). 
+Install MongoDB
+Install MongoDB on the server, access MongoDB installation documentation (https://docs.mongodb.com/manual/administration/install-on-linux/)  and choose your Linux distribution for instructions to install on your server. 
+Install Anystyle
+Citing Insights requires the Anystyle.io software to parse academic references. Anystyle.io requires that the Ruby programming language  is available on the server to install the Anystyle Gem.
+
+First, install Ruby from the Ruby Homepage 
+(url: https://www.ruby-lang.org/en/documentation/installation/ )
+
+Then, install Anystyle by typing  [sudo] gem install anystyle-cli  into the terminal. 
+
+Clone the Repository
+Clone the repository by running 
+
+git clone https://github.com/hsu-library-project-x/citing-insights-beta.git
+
+Install Dependencies in Client Directory
+
+To install dependencies, navigate inside the citing-insights-beta directory, created through the previous clone command. Then navigate to the client directory using these two commands. 
+
+cd citing-insights-beta
+
+cd client
+
+Install all necessary dependencies for the client side of the application by running the following command. Please make sure you’re in the client directory. 
+
+npm install
+
+Install Dependencies in Server Directory
+Assuming, you just installed dependencies in the client directory navigate to the server directory using the following commands. 
+
+cd ..
+cd server
+
+Then install dependencies on the server using the command
+
+ npm install
+
+Obtaining Google API Credentials
+Citing Insights requires Google to log in and out of the application. In order for the Citing Insights log in to work for your institution, you need to obtain Google API Credentials. To get credentials go to console.developers.google, create a new project, and enable (it is free, but need to use a credit/debit card to register) to both Google Analytics API and Identity Toolkit API
+Be sure to click the Credentials tab on the left and set the correct Redirect URI’s, as instructed by Google. 
+
+Back in the application’s directory, navigate to citing-insights-beta/server/config.js,
+And in the field for clientId: “”, place in the empty quotes your ClientID as assigned by Google, as well as your Client Secret key being put in the clientSecret: “” empty quotes. 
+Similarly, in citing-insights-beta/client/src/config.json, place your ClientID into the empty field. 
 
 
-`/<collection>/`
+Starting the Application
 
-Queries the database for the entire collection, and returns JSON
+To run the application locally and in development mode, type into the terminal:
 
+npm run dev
 
-#### Show -- GET Request
+This will launch the server at http://localhost:5000
 
-`/<collection>/:id`
+And the client (React application) at http://localhost:3000
 
-Queries the database for a specific document in a collection, where
-:id references the ObjectId for the given document. Returns document in JSON.
+To stop the servers, type CTRL + C in the terminal that you are running npm run dev in.
+Note: This configuration is running nodemon, which allows for the server to restart any time it detects a change in a file(hot reloading). So, no need to bring down and bring up the server each time a change is made to a file, simply saving the file suffices.
 
+To deploy the application non-locally, follow the documentation here
 
-#### Create -- POST Request
-
-`/<collection>/`
-
-Creates a new document in the given collection. 
-
-
-#### Update -- PUT Request
-
-`/<collection>/:id`
-
-Updates the document that :id references for the desired collection. 
-
-
-#### Remove -- DELETE Request
-
-`/<collection>/:id`
-
-Deletes the document from the given collection that corresponds the 
-:id sent with the DELETE request
-
-
-## *Examples*
-
-* /api/papers/
-
-  * If sent a GET request, this will show all documents in the paper collection.
- * If sent a POST request, this will create a document in papers, with information sent along with the request.
-
-* /api/papers/5d0aab0cf43d790f49ed2b6b
-
- * If sent a GET request, this URL will show the contents of the paper with the corresponding 
-id: 5d0aab0cf43d790f49ed2b6b.
-
- * If sent a DELETE request, this will delete that corresponding document.
+https://create-react-app.dev/docs/deployment/
