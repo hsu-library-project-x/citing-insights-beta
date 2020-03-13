@@ -35,7 +35,7 @@ These instructions will get you a copy of the project up and running on your loc
 * [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 
 
 ```
- sudo apt-get install ruby-full
+ [sudo] apt-get install ruby-full
 ```
 
 * [AnyStyle.io](https://anystyle.io/)
