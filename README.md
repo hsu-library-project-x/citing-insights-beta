@@ -2,6 +2,25 @@
 
 A web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can upload a student paper, all the citations are detected and discovery of the sources are made easy. The tool is designed so you can leverage and/or edit AAC&U Information Literacy and other assessment rubrics to the student papers, and annotate, providing students with feedback, or providing accrediting bodies with detailed reports.
 
+## Table of Contents 
+
+* [Version](#version)
+* [Getting Started](#getting-started)
+  * [Prerequisites](#prerequisites)
+  * [Installing ](#installing )
+* [Deployment](#deployment)
+* [Known Issues](#known-issues)
+* [Version 1.0 Features](#version-1.0-features)
+* [Built With](#built-with)
+* [Contributing](#contributing)
+* [Authors](#authors)
+* [Project Sponsor](#project-sponsor)
+* [License](#license)
+* [Acknowledgments](#acknowledgments)
+* [User Guide](#user-guide)
+
+
+
 ## Version
  Beta 
 
@@ -11,24 +30,25 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-[Node.js](https://nodejs.org/en/)
-[MongoDB](https://docs.mongodb.com/manual/installation/) (follow instructions for operating system)
-[Ruby](https://www.ruby-lang.org/en/documentation/installation/) 
+* [Node.js](https://nodejs.org/en/)
+* [MongoDB](https://docs.mongodb.com/manual/installation/) (follow instructions for operating system)
+* [Ruby](https://www.ruby-lang.org/en/documentation/installation/) 
 
 ```
  sudo apt-get install ruby-full
 ```
 
-[AnyStyle.io]
+* [AnyStyle.io](https://anystyle.io/)
 ```
 [sudo] gem install anystyle-cli
 ```
 
-### Installing
+## Installing 
 
 A step by step series of examples that tell you how to get a development env running 
 
 ###### Step 1: Navigate to the client directory and install dependencies
+
 ```
 cd citing-insights-beta
 ```
@@ -87,6 +107,7 @@ To start the application locally and in development mode, from a Linux or Linux 
 ```
 npm run dev
 ```
+
 This will launch the server at http://localhost:5000, and the client (React application) at http://localhost:3000
 
 ###### Notes: 
@@ -100,26 +121,22 @@ For additional information on how to launch on a Linux server see our [Server Do
 
 ## Known Issues
 
-Manage Coursework
+* Manage Coursework
   * Assignments are slow to appear
   * Papers are not deleted
-  
-Upload
+* Upload
   * Upload feedback too fast for user to see
   * Application crashes when class and assignment are not selected 
-  
-Rubrics
+* Rubrics
   * User can add the same rubric more than once
-  * Create new rubric accepts out of range number of cards
-  
-PDF viewer
+  * Create new rubric accepts out of range number of cards 
+* PDF viewer
   * PDF Search Tool does not bring user to desired location on the paper
   * Highlighted text color does not change when iterating through list
   * PDF text font and size changes upon text selection
   * Viewer slower on large documents with many pages
-  * Zoom out justifies left leaving large grey space 
-  
-Overview
+  * Zoom out justifies left leaving large grey space  
+* Overview
   * If page was visited before and user goes back to analyze and to make more assessments or changes, then the page will have to be refreshed upon return. 
   
   
@@ -163,7 +180,7 @@ This project is licensed under the MIT License
 A big thank you to our alpha and beta testers! They are in alaphabetical order: 
 Sue Armitage, Victoria Bruner, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, and Joshua Zender.  
 
-## User Guides
+## User Guide
 
 A [quick guide](https://github.com/hsu-library-project-x/citing-insights-beta/blob/master/CI%20Documentation%20Beta.pdf) was developed by the Citing Insights team to assist users.
 
