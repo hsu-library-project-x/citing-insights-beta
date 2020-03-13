@@ -38,7 +38,7 @@ These instructions will get you a copy of the project up and running on your loc
  sudo apt-get install ruby-full
 ```
 
-[AnyStyle.io]
+* [AnyStyle.io](https://anystyle.io/)
 ```
 [sudo] gem install anystyle-cli
 ```
