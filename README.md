@@ -168,7 +168,7 @@ This is an open source project and we encourage anyone to take what we've done a
  * [Kyle Smith](https://github.com/smittythehippy)
  * [Mitchell Waters](https://github.com/mkwalters)
  
-## Project Sponser 
+## Project Sponsor 
 
 * [Cyril Oberlander (Library Dean)](https://github.com/cyriloberlander)
 
