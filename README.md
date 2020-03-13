@@ -81,7 +81,7 @@ Be sure to click the Credentials tab on the left and set the correct Redirect UR
 
 ###### Step 4: Add Credentials to Application
 
-Create a config **.js** file in the server directory and place 'clientID' and 'clientSecret' information with your Google Credentials, keep the quotes. 
+Create a **config.js** file in the server directory and place 'clientID' and 'clientSecret' information with your Google Credentials, keep the quotes. 
 
 ```
 module.exports = {
@@ -92,7 +92,7 @@ module.exports = {
 };
 ```
 
-Similarly,  navigate to /client/src/ create a config **.json** file and place your ClientID into the empty field. 
+Similarly,  navigate to /client/src/ create a **config.json** file and place your ClientID into the empty field. 
 
 ```
 {
