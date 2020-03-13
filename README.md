@@ -179,7 +179,7 @@ This project is licensed under the MIT License
 ## Acknowledgments
 
 A big thank you to our alpha and beta testers!  
-Sue Armitage, Victoria Bruner, Josh Callahan, Adam Carter, Jim Graham, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, Joshua Zender, and everyone at the HSU Library.  
+Sue Armitage, Victoria Bruner, Josh Callahan, Adam Carter, Jim Graham, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, Joshua Zender, and everyone at the Humboldt State University Library.
 
 ## User Guide
 
