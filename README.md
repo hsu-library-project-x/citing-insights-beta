@@ -130,6 +130,7 @@ For additional information on how to launch on a Linux server see our [Server Do
 * Rubrics
   * User can add the same rubric more than once
   * Create new rubric accepts out of range number of cards 
+  * Rubric Resource Library (https://docs.google.com/document/d/1mvjP-wZ0KyNkRVN183dm86Eb90jDzh4V9vJt9x1j6Y0/edit?usp=sharing)
 * PDF viewer
   * PDF Search Tool does not bring user to desired location on the paper
   * Highlighted text color does not change when iterating through list
@@ -177,8 +178,8 @@ This project is licensed under the MIT License
 
 ## Acknowledgments
 
-A big thank you to our alpha and beta testers! They are in alaphabetical order: 
-Sue Armitage, Victoria Bruner, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, and Joshua Zender.  
+A big thank you to our alpha and beta testers!  
+Sue Armitage, Victoria Bruner, Josh Callahan, Adam Carter, Jim Graham, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, Joshua Zender, and everyone at the HSU Library.  
 
 ## User Guide
 
