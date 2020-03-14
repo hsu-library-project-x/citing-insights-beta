@@ -179,7 +179,7 @@ This project is licensed under the MIT License
 ## Acknowledgments
 
 A big thank you to our alpha and beta testers!  
-Sue Armitage, Victoria Bruner, Josh Callahan, Adam Carter, Jim Graham, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, Joshua Zender, and everyone at the Humboldt State University Library. Also a big thank you to the Graduation Initiative 2025 from California State University, and Humboldt State University for their support of this project. HSU Library provide project based learning opportunities to solve challenges faced by higher education and the community at large. One of the key questions for Citing Insights is how can we make assessment easier. 
+Sue Armitage, Joan Berman, Victoria Bruner, Josh Callahan, Adam Carter, Jim Graham, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, Joshua Zender, and everyone at the Humboldt State University Library. Also a big thank you to the Graduation Initiative 2025 from California State University, and Humboldt State University for their support of this project. HSU Library provide project based learning opportunities to solve challenges faced by higher education and the community at large. One of the key questions for Citing Insights is how can we make assessment easier. 
 
 ## User Guide
 
