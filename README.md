@@ -1,6 +1,6 @@
 # Citing Insights
 
-A web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can easily upload a student papers, the citations are detected and links to discovery tools make it easy to evaluate the sources. The tool is designed to automate using and/or editing AAC&U Information Literacy and other assessment rubrics for assessing the student papers, add annotation, and providing students with feedback, or providing accrediting bodies with detailed reports.
+A powerful web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can easily upload a student papers, the citations are detected and links to discovery tools make it easy to evaluate the sources. The tool is designed to automate using and/or editing AAC&U Information Literacy and other assessment rubrics for assessing the student papers, add annotation, and providing students with feedback, or providing accrediting bodies with detailed reports.
 
 ## Table of Contents 
 
@@ -59,7 +59,7 @@ cd client
 npm install
 ```
 
-###### Step 2: Navigate to server directory adn install dependencies
+###### Step 2: Navigate to server directory and install dependencies
 
 ```
 cd ..
@@ -169,7 +169,7 @@ This is an open source project and we encourage anyone to build upon this outsta
  
 ## Project Sponsor 
 
-* [Cyril Oberlander (Library Dean)](https://github.com/cyriloberlander)
+* [Cyril Oberlander (Humboldt State University Library Dean)](https://github.com/cyriloberlander)
 
 ## License
 
