@@ -1,6 +1,6 @@
 # Citing Insights
 
-A web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can upload a student paper, all the citations are detected and discovery of the sources are made easy. The tool is designed so you can leverage and/or edit AAC&U Information Literacy and other assessment rubrics to the student papers, and annotate, providing students with feedback, or providing accrediting bodies with detailed reports.
+A web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can easily upload a student papers, the citations are detected and links to discovery tools make it easy to evaluate the sources. The tool is designed to automate using and/or editing AAC&U Information Literacy and other assessment rubrics for assessing the student papers, add annotation, and providing students with feedback, or providing accrediting bodies with detailed reports.
 
 ## Table of Contents 
 
@@ -120,7 +120,7 @@ This configuration is running nodemon, which allows for the server to restart an
 For additional information on how to launch on a Linux server see our [Server Documentation](https://github.com/hsu-library-project-x/citing-insights-beta/blob/master/Server%20Documentation%20Beta.pdf)
 
 ## Known Issues
-
+To be resolved with Version 1.0.
 * Manage Coursework
   * Assignments are slow to appear
   * Papers are not deleted
@@ -140,13 +140,14 @@ For additional information on how to launch on a Linux server see our [Server Do
   *[Rubric Resource Library](https://docs.google.com/document/d/1mvjP-wZ0KyNkRVN183dm86Eb90jDzh4V9vJt9x1j6Y0/edit?usp=sharing)
   
 ## Version 1.0 Features
-
+Citing Insights Version 1 release is expected in the end of May, and the planned features include: 
+* Enhanced PDF Search functionality
 * Multiple evaluators mode, with inter-reliability testing / norming, and analytics
 * Robust analytical reports & outcomes
 * Group Administration Console
 * Robust rubric resources
 * More Improvements to Design
-* Expected release date end of May 2020
+* Integration roadmap with Learning Management System. 
 
 ## Built With
 * [MongoDB ](https://www.mongodb.com/) - database
@@ -156,7 +157,7 @@ For additional information on how to launch on a Linux server see our [Server Do
 
 ## Contributing
 
-This is an open source project and we encourage anyone to take what we've done and build upon it, as long as the intent is good. That being said, the authors will not be responsible for maintaing this project. 
+This is an open source project and we encourage anyone to build upon this outstanding achievement, as long as the intent is good. That being said, the authors will not be responsible for maintaining this project. Citing Insights will focus development on student features next year, if available funding is provided. 
 
 ## Authors
  
@@ -177,7 +178,7 @@ This project is licensed under the MIT License
 ## Acknowledgments
 
 A big thank you to our alpha and beta testers!  
-Sue Armitage, Victoria Bruner, Josh Callahan, Adam Carter, Jim Graham, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, Joshua Zender, and everyone at the Humboldt State University Library.
+Sue Armitage, Victoria Bruner, Josh Callahan, Adam Carter, Jim Graham, Chris Guillen, Sally Hang, Julia Heatherwick, Alison Holmes, Katia Karadjova, Cyril Oberlander, Jeremy Shellhase, Meghann Weldon, Joshua Zender, and everyone at the Humboldt State University Library. Also a big thank you to the Graduation Initiative 2025 from California State University, and Humboldt State University for their support of this project. HSU Library provide project based learning opportunities to solve challenges faced by higher education and the community at large. One of the key questions for Citing Insights is how can we make assessment easier. 
 
 ## User Guide
 
