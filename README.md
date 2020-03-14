@@ -1,6 +1,7 @@
 # Citing Insights
 
 A powerful web application designed to streamline assessment of students' information literacy and other skills. With Citing Insights, you can easily upload a student papers, the citations are detected and links to discovery tools make it easy to evaluate the sources. Discovery tools include Semantic Scholar, Google Scholar, and a Library's Alma Primo. Citing Insights is designed to automate using or editing AAC&U Information Literacy Value Rubrics, and other assessment rubrics, for assessing the student papers. You can also add annotation, and provide students feedback, or provide accrediting bodies with detailed assessment reports.
+[Screenshot of Citing Insights Analyze user interface](https://docs.google.com/document/d/11_ayYrms_mxTEbNaxvpZimhb3jYgJ0sMT-XjFBLwSXo/edit?usp=sharing)
 
 ## Table of Contents 
 
@@ -137,7 +138,7 @@ To be resolved with Version 1.0.
   * If page was visited before and user goes back to analyze and to make more assessments or changes, then the page will have to be refreshed upon return. 
   
 ## Rubrics
-  *[Rubric Resource Library](https://docs.google.com/document/d/1mvjP-wZ0KyNkRVN183dm86Eb90jDzh4V9vJt9x1j6Y0/edit?usp=sharing)
+  * [Rubric Resource Library](https://docs.google.com/document/d/1mvjP-wZ0KyNkRVN183dm86Eb90jDzh4V9vJt9x1j6Y0/edit?usp=sharing)
   
 ## Version 1.0 Features
 Citing Insights Version 1 release is expected in the end of May, and the planned features include: 
