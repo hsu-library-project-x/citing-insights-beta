@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react';
-import { Grid, Select, MenuItem, Button, FormControl, Tooltip, InputLabel, TextField, Fab} from '@material-ui/core';
+import { Grid, Select, MenuItem, Button, FormControl, Tooltip, InputLabel,
+  TextField, Fab, Snackbar } from '@material-ui/core';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
+import Alert from '@material-ui/lab/Alert';
+
 import RubricAccordion from './RubricAccordion.jsx';
 import PdfComponent from "../Pdf/PdfComponent.jsx";
 import DiscoveryTool from './DiscoveryTool.jsx';
@@ -32,6 +35,8 @@ class Analyze extends PureComponent {
       pageNumber: null,
       radio_score: null,
       raw_pdf_data:null,
+      snackbarOpen: true,
+      messageInfo:null,
     };
 
     this.componentWillMount = this.componentWillMount.bind(this);
@@ -47,6 +52,72 @@ class Analyze extends PureComponent {
     this.get_paper_info = this.get_paper_info.bind(this);
     this.updateCitationId = this.updateCitationId.bind(this);
     this.AssessmentScore = this.AssessmentScore.bind(this);
+    this.DisplayAlerts = this.DisplayAlerts.bind(this);
+    this.processQueue = this.processQueue.bind(this);
+    this.handleQueueAlert = this.handleQueueAlert.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.handleExited = this.handleExited.bind(this);
+
+    this.queueRef = React.createRef();
+    this.queueRef.current = [];
+
+  }
+
+
+  processQueue(){
+    if(this.queueRef.current.length >0){
+      this.setState({
+        messageInfo: this.queueRef.current.shift(),
+        snackbarOpen:true
+      });
+    }
+  };
+
+  handleQueueAlert(message, severity){
+    this.queueRef.current.push({
+      message: message,
+      severity:severity,
+      key: new Date().getTime(),
+    });
+
+    if(this.state.snackbarOpen){
+      this.setState({snackbarOpen:false});
+    }else{
+      this.processQueue();
+    }
+
+  };
+
+  handleClose(event, reason){
+    if(reason === 'clickaway'){
+      return;
+    }
+    this.setState({snackbarOpen:false});
+  };
+
+  handleExited(){
+    this.processQueue();
+  };
+
+  DisplayAlerts(){
+      return <Snackbar
+          key={this.state.messageInfo ? this.state.messageInfo.key : undefined}
+          anchorOrigin={{
+            vertical: 'top',
+            horizontal: 'right',
+          }}
+          open={this.state.snackbarOpen}
+          autoHideDuration={3000}
+          onClose={this.handleClose}
+          onExited={this.handleExited}
+      >
+        <Alert variant={'filled'}
+               severity={this.state.messageInfo ? this.state.messageInfo.severity : undefined}
+               onClose={this.handleClose}
+        >
+          {this.state.messageInfo ? this.state.messageInfo.message : undefined}
+        </Alert>
+      </Snackbar>
   }
 
   AssessmentScore(newScore, title) {
@@ -57,7 +128,11 @@ class Analyze extends PureComponent {
     let that = this;
     fetch('/api/papers/' + paper_id)
         .then(function (response) {
-          return response.json();
+          if (response.ok || (response.status !== 404 && response.status !== 500 ) ){
+            return response.json();
+          }else{
+            that.handleQueueAlert('Could not Access Paper', 'error');
+          }
         })
         .then(function (myJson) {
           that.setState({ current_pdf_data: myJson["pdf"]["data"] ,raw_pdf_data: myJson['body'] });
@@ -69,14 +144,18 @@ class Analyze extends PureComponent {
     //Grab info about the assignment
     fetch('/api/assignments/' + this.props.selectedAssignmentId)
       .then(function (response) {
-        return response.json();
+        if (response.ok || (response.status !== 404 && response.status !== 500 ) ){
+          return response.json();
+        }else{
+          that.handleQueueAlert('Could not Access Paper', 'error');
+          
+        }
       })
       .then(function (myJson) {
         that.setState({
           assignment: myJson
         });
       });
-
   }
 
   componentWillUnmount() {
@@ -90,14 +169,13 @@ class Analyze extends PureComponent {
         if(response.ok || response.status === 201){
           return response.json();
         }else{
-          alert("Something went wrong");
+          that.handleQueueAlert('Could not get Citations', 'error');
         }
       })
       .then(function (myJson) {
         that.setState({ citations: myJson });
         return (myJson);
       });
-
   }
 
   setCurrentCitation(citation_id) {
@@ -114,7 +192,12 @@ class Analyze extends PureComponent {
     if (this.props.selectedAssignmentId !== undefined) {
       fetch('/api/papers/by_assignment_id/' + this.props.selectedAssignmentId)
         .then(function (response) {
-          return response.json();
+          if (response.ok || (response.status !== 404 && response.status !== 500 ) ){
+            return response.json();
+          }else{
+            that.handleQueueAlert('Could not get Citations', 'error');
+
+          }
         })
         .then(function (myJson) {
           that.setState({
@@ -123,13 +206,19 @@ class Analyze extends PureComponent {
           try {
             fetch('/api/papers/' + myJson[0]["_id"])
               .then(function (response) {
-                return response.json();
+                if (response.ok || (response.status !== 404 && response.status !== 500 ) ){
+                  return response.json();
+                }else{
+                  that.handleQueueAlert('Could not get Paper', 'error');
+                }
               })
               .then(function (myJson) {
                 that.setState({ current_pdf_data: myJson["pdf"]["data"], raw_pdf_data: myJson['body'] });
                 that.get_citation_info(myJson["_id"])
                   .then((citations) => {
-                    that.setCurrentCitation(citations[1]["_id"]);
+                    if(citations[1]){
+                      that.setCurrentCitation(citations[1]["_id"]);
+                    }
                   });
               });
           } catch (e) {
@@ -144,7 +233,11 @@ class Analyze extends PureComponent {
     }
     fetch('/api/rubrics/' + this.props.user.id)
       .then(function (response) {
-        return response.json();
+        if (response.ok || response.status !== 500 ) {
+          return response.json();
+        }else{
+          that.handleQueueAlert('Could not get Citations', 'error');
+        }
       })
       .then(function (myJson) {
         that.setState({ AvailableRubrics: myJson });
@@ -198,6 +291,9 @@ class Analyze extends PureComponent {
     //Check to see if assessment has already been made.
     let assessments = json.assessments;
 
+    if (assessments !== undefined){
+
+    }
     if (assessments.length !== 0) {
 
       //Look at each assessment
@@ -230,15 +326,14 @@ class Analyze extends PureComponent {
                   })
                     .then((response) => {
                       if (response.ok || response.status === 201) {
-                        alert("Assessment Saved!");
-                        return response.json();
+                        that.handleQueueAlert('Assessment Save Success', 'success');
                       }
                       else {
-                        alert("Something went wrong. Please Try again");
+                        that.handleQueueAlert('Could not Save Assessment', 'error');
                       }
                     });
                 } else {
-                  alert("something went wrong. Please try again");
+                  that.handleQueueAlert('Could not Save Assessment', 'error');
                 }
               });
           } else {
@@ -256,11 +351,10 @@ class Analyze extends PureComponent {
           })
             .then((response) => {
               if (response.ok || response.status === 201) {
-                alert("Assessment Saved!");
-                return response.json();
+                that.handleQueueAlert('Assessment Save Success', 'success');
               }
               else {
-                alert("Something went wrong. Please Try again");
+                that.handleQueueAlert('Could not Save Assessment', 'error');
               }
             });
         }
@@ -277,11 +371,10 @@ class Analyze extends PureComponent {
       })
         .then((response) => {
           if (response.ok || response.status === 201) {
-            alert("Assessment Saved!");
-            return response.json();
+            that.handleQueueAlert('Assessment Save Success', 'success');
           }
           else {
-            alert("Something went wrong. Please Try again");
+            that.handleQueueAlert('Could not Save Assessment', 'error');
           }
         })
     }
@@ -366,6 +459,7 @@ class Analyze extends PureComponent {
         justify="flex-start"
         alignItems="flex-start"
       >
+        {this.DisplayAlerts()}
         <Grid item xs={12} sm={4} md={2}>
           {/*<Paper variant="outlined">*/}
           <Tooltip title="Change Assignment">
@@ -424,7 +518,6 @@ class Analyze extends PureComponent {
                 current_citation_id={this.state.current_citation_id}
                 key={this.state.current_citation_id}
               /> : null}
-            {/*</Paper>*/}
           </Grid>
 
           {/* PDF Viewer */}

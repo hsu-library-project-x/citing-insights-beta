@@ -1,5 +1,7 @@
 let courseModel = require('../models/courseModel.js');
 let assignmentModel = require('../models/assignmentModel.js');
+let citationModel = require('../models/citationModel.js');
+let paperModel = require('../models/paperModel.js');
 /**
  * courseController.js
  *
@@ -13,6 +15,8 @@ module.exports = {
      */
 
     list: function (req, res) {
+        if(req.session.user !== undefined) {
+
         let id = req.params.id;
         courseModel.find({user_id: id}, function (err, courses) {
             if (err) {
@@ -23,12 +27,15 @@ module.exports = {
             }
           return res.json(courses);
         });
+    }
     },
 
     /**
      * courseController.show()
      */
     show: function (req, res) {
+        if(req.session.user !== undefined) {
+
         let id = req.params.id;
         courseModel.findOne({_id: id}, function (err, course) {
             if (err) {
@@ -44,12 +51,15 @@ module.exports = {
             }
             return res.json(course);
         });
+    }
     },
 
     /**
      * courseController.create()
      */
-    create: function (req, res) {
+    create: function (req, res) {        
+        if(req.session.user !== undefined) {
+
 
         let course = new courseModel({
 			name : req.body.name,
@@ -67,12 +77,15 @@ module.exports = {
             }
             return res.status(201).json(course);
         });
+    }
     },
 
     /**
      * courseController.update()
      */
     update: function (req, res) {
+        if(req.session.user !== undefined) {
+
         let id = req.params.id;
         courseModel.findOne({_id: id}, function (err, course) {
             if (err) {
@@ -101,30 +114,78 @@ module.exports = {
                 return res.json(course);
             });
         });
+    }
     },
 
     /**
      * courseController.remove()
      */
     remove: function (req, res) {
+        if(req.session.user !== undefined) {
+
         let id = req.params.id;
-        assignmentModel.deleteMany({"class_id": id}, function(err, assignments){
-            if(err){
+
+        assignmentModel.find({"class_id": id}, function(err, assignments) {
+            if (err) {
                 return res.status(500).json({
-                    message: 'Error when deleting the assignments of the course.',
+                    message: 'Error when finding the assignments of the course.',
                     error: err
                 });
+            }
+
+            for (let i = 0; i < assignments.length; i++) {
+                paperModel.find({'assignment_id': assignments[i]['_id']}, function (err, papers) {
+                    if (err) {
+                        return res.status(500).json({
+                            message: 'Error when finding the papers of the assignment.',
+                            error: err
+                        });
+                    }
+
+                    for (let j = 0; j < papers.length; j++) {
+                        citationModel.deleteMany({'paper_id': papers[j]['_id']}, function(err, citations){
+                            if(err) {
+                                return res.status(500).json({
+                                    message: 'Error when deleting the citations of the paper.',
+                                    error: err
+                                });
+                            }
+                        });
+                    }
+                });
+
+                paperModel.deleteMany({'assignment_id': assignments[i]['_id']}, function (err, papers) {
+                    if (err) {
+                        return res.status(500).json({
+                            message: 'Error when deleting the papers of the assignment.',
+                            error: err
+                        });
+                    }
+                });
+
             }
         });
 
-        courseModel.findByIdAndRemove(id, function (err, course) {
-            if (err) {
-                return res.status(500).json({
-                    message: 'Error when deleting the course.',
-                    error: err
-                });
-            }
-            return res.status(204).json();
-        });
+
+            assignmentModel.deleteMany({'class_id': id}, function (err, assingments) {
+                if (err) {
+                    return res.status(500).json({
+                        message: 'Error when deleting assignments.',
+                        error: err
+                    });
+                }
+            });
+
+
+            courseModel.findByIdAndRemove(id, function (err, course) {
+                if (err) {
+                    return res.status(500).json({
+                        message: 'Error when deleting the course.',
+                        error: err
+                    });
+                }
+                return res.status(204).json();
+            });
+        }
     }
 };
